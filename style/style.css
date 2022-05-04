@@ -1,0 +1,237 @@
+@charset "utf-8";
+/* base */
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  src: url("../font/SpoqaHanSansNeo-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  src: url("../font/SpoqaHanSansNeo-Medium.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  src: url("../font/SpoqaHanSansNeo-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+}
+
+#appLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 모달 스타일 */
+.modal {
+  display: none;
+  height: 100%;
+}
+
+.btn-close {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.modal.on {
+  display: block;
+}
+
+.modal::after {
+  display: block;
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 10;
+}
+
+.modal .cont-form-login {
+  width: 100%;
+  max-width: 960px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 20;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  padding-bottom: 80px;
+}
+
+.cont-form-login .txt-form {
+  margin: 90px 0 30px;
+  padding-left: 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+/* --------이름 전화번호 폼--------------- */
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 15px 0;
+}
+.cont-form-login .form-login {
+  padding: 0 90px 0;
+  /* text-align: center; */
+}
+
+.name {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 0;
+  /* padding-bottom: 10px; */
+}
+
+.input-box .inp {
+  display: flex;
+  width: 100%;
+  padding: 15px 0 15px 16px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ff7a00;
+  margin-bottom: 3px;
+}
+
+.input-box {
+  flex-grow: 1;
+  gap: 30px;
+}
+.input-box .inp:focus {
+  outline: 3px auto #ff7a00;
+}
+
+.input-box.input-box-email .inp-error {
+  padding: 10px 0;
+  color: #4a5056;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+/*-------- 수신동의-------*/
+.form-login .labl-hold {
+  display: block;
+  color: #222529;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 17px 0 21px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.apply-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+/*----- 체크박스 버튼 커스텀----- */
+/* .inp-hold[id="inpHold"] + label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bcbcbc;
+  cursor: pointer;
+}
+
+.inp-hold[id="inpHold"]:checked + label {
+  background-color: #ff7a00;
+} */
+
+/*----- 신청하기 버튼 -------*/
+.btn-apply {
+  width: 80%;
+  display: block;
+  margin: 40px auto 10px;
+  padding: 17px 0 15px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  background-color: #ff7a00;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*-------공유하기,꽃 검색하기 버튼------*/
+.bottom-button,
+.bottom-txt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  margin: 12px auto 10px;
+  gap: 10px;
+}
+
+.bottom-txt {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #4a5056;
+}
+
+.btn-share,
+.btn-search {
+  /* position: absolute; */
+  flex-grow: 1;
+  display: block;
+  margin: auto;
+  background: #ffffff;
+  border: 1px solid #aeb5bc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: bold;
+  color: #878e95;
+  height: 44px;
+  left: 388px;
+  top: 532px;
+}
+
+/* 접근성 */
+.form-login .inp-hold:focus + .labl-hold::before {
+  outline: 2px solid rgb(232, 147, 20);
+  border-radius: 50%;
+}
+
+/* 닫기버튼 */
+.cont-form-login .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px 15px;
+  box-sizing: content-box;
+  background-color: transparent;
+}

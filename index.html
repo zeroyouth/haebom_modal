@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <article class="modal on">
+        <h2 class="txt-hide">모달창</h2>
+        <section class="cont-form-login">
+            <p class="txt-form">꽃 구매 서비스는 현재 준비 중에 있어요.🥺
+                <br />꽃 시장의 꽃을 온라인으로 구매하실 수 있도록 준비 중이니,<br />구매 서비스 오픈 알림을 신청하고 사전 예약 혜택을
+                받아 가세요!
+            </p>
+
+            <form class="form-login">
+                <div class="box">
+                    <div class="input-box input-box-name error">
+                        <p class="name">이름</p>
+                        <label for="inp_name" class="txt-hide">이름</label>
+                        <input type="text" class="inp name" id="inp_name" placeholder="이름">
+                        <strong class="inp-error txt-hide">이름을 입력해 주세요.</strong>
+                    </div>
+                    <div class="input-box input-box-tel error">
+                        <p class="name">전화번호</p>
+                        <label for="inp_tel" class="txt-hide">전화번호</label>
+                        <input type="tel" class="inp tel" id="inp_tel" placeholder="전화번호">
+                        <strong class="inp-error txt-hide">전화번호를 입력해주세요.</strong>
+                    </div>
+                </div>
+                <div class="input-box input-box-email error">
+                    <p class="name">이메일</p>
+                    <label for="inp_mail" class="txt-hide">전화번호</label>
+                    <input type="tel" class="inp" id="inp_mail" placeholder="이메일">
+                    <strong class="inp-error">서비스 오픈 알림이 문자와 이메일로 발송되오니 정확한 정보를 입력해 주세요.</strong>
+                </div>
+                <div class="apply-form">
+                    <label for="inpHold" class="labl-hold">서비스 알림 안내를 위한 개인정보 처리방침과 마케팅 정보 수신에 동의합니다.</label>
+                    <input type="checkbox" id="inpHold" class="inp-hold">
+                    <label for="inpHold" class="labl-hold">수신동의</label>
+                </div>
+                <button type="button" class="btn-apply">구매 서비스 오픈 알림 신청하기</button>
+                <div class="bottom-button">
+                    <button type="button" class="btn-share">공유하기</button>
+                    <button type="button" class="btn-search">꽃 검색하기</button>
+                </div>
+                <div class="bottom-txt">
+                    <p>주변 플로리스트에게 플로웨이를 소개해 보세요!</p>
+                    <p>꽃을 검색하고 꽃 시장 정보를 확인해 보세요!</p>
+                </div>
+                <button type="button" class="btn-close"><img src="images-login/close.png" alt="모달창 닫기"></button>
+
+            </form>
+        </section>
+    </article>
+    <!-- 모달 끝 -->
+
+</body>
+
+</html>
